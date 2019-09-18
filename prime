@@ -1,0 +1,41 @@
+//made by Sankalp Pandey
+//roll  no-19/BHP/021
+//Bsc(H)Physics
+
+
+#include <iostream>
+#include<math.h>
+using namespace std;
+
+int prime(int);
+
+int main()
+{
+   bool isPrime;
+   int m;
+   cout<<"Provide the limit  "<<endl;
+   cin>>m;
+   for(int n = 2; n < m; n++) 
+   {
+   	
+      isPrime = prime(n);
+
+      if(isPrime == true)
+         cout<<n<<" "<<endl;
+   }
+   return 0;
+}
+int prime(int n)
+ {
+   bool isPrime = true;
+
+   for(int i = 2; i <= sqrt(n); i++)
+    {
+   	
+      if (n%i == 0) {
+         isPrime = false;
+         break;
+      }
+   }  
+   return isPrime;
+}
